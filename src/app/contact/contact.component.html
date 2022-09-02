@@ -1,0 +1,30 @@
+<section class="contactus" id="contactusid">
+  <div class="container heading text-center">
+    <h1 class="text-center font-weight-bold">{{ content.title }}</h1>
+    <p>{{ content.text }}</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-8 offset-2">
+        <div class="alert alert-success" *ngIf="submitted">Thank you! Your message has been received.</div>
+        <form #f="ngForm" (ngSubmit)="f.valid && submit()">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter name" id="username" name="username" [(ngModel)]="model.username" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Enter email" id="email" name="email" [(ngModel)]="model.email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter mobile" id="mobile" name="mobile" [(ngModel)]="model.mobile" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="4" placeholder="Write/Note down your comment" id="comment" name="comment" [(ngModel)]="model.comment"></textarea>
+          </div>
+          <div class="d-flex justify-content-center contact-button">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

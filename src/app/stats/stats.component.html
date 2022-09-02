@@ -1,0 +1,11 @@
+<section class="project-work" id="projectdiv">
+  <div class="container heading text-center">
+    <p class="text-center font-weight-bold text-uppercase">{{ heading }}</p>
+  </div>
+  <div class="container d-flex justify-content-around align-items-center text-center">
+    <div *ngFor="let s of stats; let i = index">
+      <h1 class="count">{{ displayed[i] }}</h1>
+      <p>{{ s.label }}</p>
+    </div>
+  </div>
+</section>

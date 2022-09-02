@@ -1,0 +1,21 @@
+<section class="pricign" id="pricign-div">
+  <div class="container heading text-center">
+    <h1 class="text-center font-weight-bold">{{ title }}</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-12" *ngFor="let p of plans" [class.card-secound]="p.highlighted">
+        <div class="card text-center">
+          <div class="card-header">{{ p.name }}</div>
+          <div class="card-body">
+            <li>$<span class="many">{{ p.price }}</span>/Website</li>
+            <li *ngFor="let f of p.features">{{ f }}</li>
+          </div>
+          <div class="card-footer">
+            <a href="#">Purchase</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

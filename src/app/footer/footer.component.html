@@ -1,0 +1,31 @@
+<footer class="footersection" id="footerid">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12 footer-div">
+        <div>
+          <h3>{{ footer.aboutTitle }}</h3>
+          <p>{{ footer.aboutText }}</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 footer-div">
+        <h3>{{ footer.navTitle }}</h3>
+        <li *ngFor="let l of footer.links"><a [href]="'#' + l.target">{{ l.label }}</a></li>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 footer-div">
+        <h3>{{ footer.newsletterTitle }}</h3>
+        <p>{{ footer.newsletterText }}</p>
+        <div class="container newsletter-main">
+          <div class="row">
+            <div class="col-12"><app-newsletter-input></app-newsletter-input></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 text-center">
+      <p>{{ copyright }}</p>
+    </div>
+    <div class="scrolltop float-right">
+      <i class="fa fa-arrow-up" id="myBtn" [style.display]="showTop ? 'block' : 'none'" (click)="scrollTop()"></i>
+    </div>
+  </div>
+</footer>

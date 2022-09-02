@@ -1,0 +1,35 @@
+<section class="happylinets" id="happylinets-div">
+  <div class="container heading text-center">
+    <h1 class="text-center font-weight-bold">{{ heading.title }}</h1>
+    <p>{{ heading.text }}</p>
+  </div>
+  <div id="demo" class="carousel slide" (mouseenter)="stopAutoPlay()" (mouseleave)="startAutoPlay()">
+    <ul class="carousel-indicators">
+      <li *ngFor="let s of slides; let i = index" [class.active]="i === active" (click)="manual(i)"></li>
+    </ul>
+
+    <div class="container">
+      <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let slide of slides; let i = index" [class.active]="i === active">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-12" *ngFor="let t of slide">
+              <div class="box">
+                <a href="#"><img [src]="t.image" class="img-fluid img-thumbnail" [alt]="t.name"></a>
+                <p class="m-4">{{ t.quote }}</p>
+                <h1>{{ t.name }}</h1>
+                <h2>{{ t.role }}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#demo" (click)="manual(active - 1, $event)">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" (click)="manual(active + 1, $event)">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</section>

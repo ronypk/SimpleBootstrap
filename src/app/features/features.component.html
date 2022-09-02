@@ -1,0 +1,11 @@
+<section class="header-extradiv">
+  <div class="container">
+    <div class="row">
+      <div class="extra-div col-lg-4 col-md-4 col-12" *ngFor="let f of features">
+        <a><i class="fa-2x fa" [ngClass]="f.icon" aria-hidden="true"></i></a>
+        <h2>{{ f.title }}</h2>
+        <p>{{ f.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>

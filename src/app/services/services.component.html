@@ -1,0 +1,33 @@
+<section class="Serviceoffer" id="servicediv">
+  <div class="container heading text-center">
+    <h1 class="text-center font-weight-bold">{{ heading.title }}</h1>
+    <p class="text-center">{{ heading.text }}</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-10 col-10 offset-1 offset-lg-0">
+        <div class="names my-3">
+          <ng-container *ngFor="let s of skills">
+            <h1>{{ s.name }}</h1>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                   [attr.aria-valuenow]="s.value" aria-valuemin="0" aria-valuemax="100"
+                   [style.width.%]="s.value">{{ s.value }}%</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-12 service">
+        <div class="row" *ngFor="let s of services">
+          <div class="col-lg-2 col-md-2 col-2 service-icon">
+            <i class="fa-2x fa" [ngClass]="s.icon" aria-hidden="true"></i>
+          </div>
+          <div class="col-lg-10 col-md-10 col-10">
+            <h2>{{ s.title }}</h2>
+            <p>{{ s.text }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
