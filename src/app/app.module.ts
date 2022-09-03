@@ -9,6 +9,7 @@ import { FeaturesComponent } from './features/features.component';
 import { ServicesComponent } from './services/services.component';
 import { StatsComponent } from './stats/stats.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { AboutComponent } from './about/about.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ContactComponent } from './contact/contact.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
@@ -18,7 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent, NavbarComponent, HeroComponent, FeaturesComponent, ServicesComponent,
-    StatsComponent, PricingComponent, TestimonialsComponent, ContactComponent,
+    StatsComponent, PricingComponent, TestimonialsComponent, AboutComponent, ContactComponent,
     NewsletterComponent, NewsletterInputComponent, FooterComponent
   ],
   imports: [BrowserModule, FormsModule],

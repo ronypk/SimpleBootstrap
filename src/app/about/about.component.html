@@ -1,0 +1,17 @@
+<section class="about-angular" id="about-div">
+  <div class="container heading text-center">
+    <h1 class="text-center font-weight-bold">{{ about.title }}</h1>
+    <p>{{ about.intro }}</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12" *ngFor="let item of about.items">
+        <div class="about-card text-center">
+          <i class="fa fa-2x" [ngClass]="item.icon" aria-hidden="true"></i>
+          <h2 class="h5 font-weight-bold">{{ item.title }}</h2>
+          <p>{{ item.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -7,7 +7,7 @@ export const NAV_LINKS = [
   { label: 'Home', target: 'topheader' },
   { label: 'Service', target: 'servicediv' },
   { label: 'Price', target: 'pricign-div' },
-  { label: 'About', target: 'happylinets-div' },
+  { label: 'About', target: 'about-div' },
   { label: 'Contact', target: 'contactusid' },
 ];
 
@@ -15,7 +15,7 @@ export const HERO = {
   title: 'We are The Web Developers',
   subtitle: 'We create the world best websites.',
   buttons: [
-    { label: 'AboutUs', target: 'happylinets-div' },
+    { label: 'AboutUs', target: 'about-div' },
     { label: 'Contact', target: 'contactusid' },
   ],
 };
@@ -91,8 +91,21 @@ export const FOOTER = {
     { label: 'Home', target: 'topheader' },
     { label: 'Services', target: 'servicediv' },
     { label: 'Price', target: 'pricign-div' },
-    { label: 'About', target: 'contactusid' },
+    { label: 'About', target: 'about-div' },
   ],
   newsletterTitle: 'Newsletter',
   newsletterText: "The problem is, writing an effective newsletter call to action (CTA) on your site is a surprisingly difficult task. Oftentimes you'll start by following the best practices .",
+};
+
+export const ABOUT_ANGULAR = {
+  title: 'ABOUT ANGULAR 9',
+  intro: 'Angular 9 was released by Google in February 2020. It is a TypeScript-based framework for building fast, scalable single-page web applications, and this site is built with it.',
+  items: [
+    { icon: 'fa-bolt', title: 'Ivy by default', text: 'Ivy is the new compiler and rendering engine, now enabled for every app. It produces smaller bundles, faster builds and better runtime performance.' },
+    { icon: 'fa-compress', title: 'Smaller bundles', text: 'Ivy removes unused code more effectively (tree-shaking), so the JavaScript sent to users is noticeably smaller, especially for large apps.' },
+    { icon: 'fa-check-circle', title: 'AOT everywhere', text: 'Ahead-of-Time compilation is on by default for both development and production, catching template errors early and making startup faster.' },
+    { icon: 'fa-bug', title: 'Better debugging', text: 'Stricter type checking in templates (fullTemplateTypeCheck / strictTemplates) and clearer error messages make bugs easier to find.' },
+    { icon: 'fa-wrench', title: 'Improved testing', text: 'TestBed is faster with Ivy, and the new component harnesses in Angular Material give more stable, readable tests.' },
+    { icon: 'fa-globe', title: 'Modern tooling', text: 'Supports TypeScript 3.6/3.7, new Angular Material components (YouTube, Google Maps), and improved i18n with build-time localization.' },
+  ],
 };
